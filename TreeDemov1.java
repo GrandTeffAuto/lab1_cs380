@@ -133,14 +133,23 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a smallest key
-	   */
-	   public int getMin(Node root){
-         //implement in here
-	      
-	   }
+	    /**
+		 * Finds the minimum value in the binary search tree.
+		 * 
+		 * @param root The starting node for finding the minimum value.
+		 * @return The minimum value in the tree.
+		 */
+		public int getMin(Node root) 
+		{
+			if (root.left == null) 
+			{
+				return root.value;
+			} 
+			else 
+			{
+				return getMin(root.left);
+			}//end conditionals
+		}//end method
 	  
 	  
 	  
