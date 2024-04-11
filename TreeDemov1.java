@@ -148,18 +148,28 @@ class Node{
 			else 
 			{
 				return getMin(root.left);
-			}//end conditionals
+			}//end conditional
 		}//end method
 	  
 	  
 	  
-	   /*
-	   a method to find the node in the tree
-	   with a largest key
-	   */
-	   public int getMax(Node root){
-         //implement in here
-	   }
+	   /**
+		 * Finds the maximum value in the binary search tree.
+		 * 
+		 * @param root The starting node for finding the maximum value.
+		 * @return The maximum value in the tree.
+		 */
+		public int getMax(Node root) 
+		{
+			if (root.right == null) 
+			{
+				return root.value;
+			} 
+			else 
+			{
+				return getMax(root.right);
+			}//end conditional
+		}//end method
 	   
 	   
 	   
